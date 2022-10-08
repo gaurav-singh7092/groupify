@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "376157374839",
+    "project_id": "groupify-2f44f",
+    "storage_bucket": "groupify-2f44f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376157374839:android:29f907dcaa8cf2dbb2f972",
+        "android_client_info": {
+          "package_name": "com.example.groupify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376157374839-j3hh6dqgg5idnul08bma6r55jin22e54.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.groupify",
+            "certificate_hash": "ca5bff44e40011fbf4943bc76a935a5a4ce47ffd"
+          }
+        },
+        {
+          "client_id": "376157374839-280m4btsoou22h6donsdfqt43p3o4ij3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBufDi8wzlTshA-niZPyboZvfNyW7QrybI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376157374839-280m4btsoou22h6donsdfqt43p3o4ij3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

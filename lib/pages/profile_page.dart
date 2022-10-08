@@ -150,6 +150,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Container(
                   child: Icon(
                     Icons.account_circle,
+                    size: 120,
                   ),
                 ),
                 const SizedBox(height: 15,),

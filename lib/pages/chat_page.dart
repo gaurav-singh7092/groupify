@@ -18,6 +18,7 @@ class ChatPage extends StatefulWidget {
 class _ChatPageState extends State<ChatPage> {
   Stream<QuerySnapshot>? chats;
   String admin = "";
+  ScrollController scrollController = ScrollController();
   TextEditingController messageController = TextEditingController();
   @override
   void initState() {
@@ -86,6 +87,7 @@ class _ChatPageState extends State<ChatPage> {
                   const SizedBox(width: 12,),
                   GestureDetector(
                     onTap: () {
+                      scrollController.animateTo(scrollController.position.maxScrollExtent, duration: Duration(milliseconds: 300), curve: Curves.easeOut);
                       sendMessages();
                     },
                     child: Container(height: 50, width: 50,
@@ -110,6 +112,7 @@ class _ChatPageState extends State<ChatPage> {
       builder: (context, AsyncSnapshot snapshot) {
         return snapshot.hasData ?
         ListView.builder(
+          controller: scrollController,
           itemCount: snapshot.data.docs.length,
           itemBuilder: (context,index) {
             return MessageTile(message: snapshot.data.docs[index]['message'], sender: snapshot.data.docs[index]['sender'], isMe: widget.userName == snapshot.data.docs[index]['sender']);

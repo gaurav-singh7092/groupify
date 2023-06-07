@@ -30,13 +30,6 @@ class _ProfilePageState extends State<ProfilePage> {
     // getUserPic();
     super.initState();
   }
-  // getUserPic() async {
-  //   await HelperFunctions.getUserPicfromSF().then((value) {
-  //     setState(() {
-  //       profileLink = value!;
-  //     });
-  //   });
-  // }
   final imagePicker = ImagePicker();
   // image picker
   Future imagePickerGallery() async {
@@ -66,8 +59,6 @@ class _ProfilePageState extends State<ProfilePage> {
     await ref.putFile(image!);
     downloadUrl = await ref.getDownloadURL();
     QuerySnapshot snapshot = await DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid).savingImage(downloadUrl!);
-
-
   }
   @override
   Widget build(BuildContext context) {
@@ -148,7 +139,7 @@ class _ProfilePageState extends State<ProfilePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  child: Icon(
+                  child: const Icon(
                     Icons.account_circle,
                     size: 120,
                   ),

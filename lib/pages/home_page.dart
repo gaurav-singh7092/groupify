@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
       });
     });
     // getting the list of snapshots in our stream
-    await DatabaseService(uid: FirebaseAuth.instance.currentUser!.uid)
+    await DatabaseService(uid: FirebaseAuth.instance.currentUser?.uid)
         .getUserGroup()
         .then((snapshot) {
       setState(() {
@@ -82,10 +82,15 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           padding: EdgeInsets.symmetric(vertical: 50),
           children: [
-            Icon(
-              Icons.account_circle,
-              size: 150,
-              color: Colors.grey[700],
+            Container(
+              height: 100,
+              width: 50,
+              child: const CircleAvatar(
+                radius: 100,
+                child: Image(
+                  image: AssetImage('assets/images/icon1.png'),
+                ),
+              ),
             ),
             const SizedBox(
               height: 15,
@@ -93,7 +98,7 @@ class _HomePageState extends State<HomePage> {
             Text(
               userName,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
               ),
